@@ -1,0 +1,155 @@
+2026-08-27T14:55:55.345+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 13936 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-08-27T14:55:55.349+05:30 DEBUG 13936 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-27T14:55:55.349+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-27T14:55:55.384+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-27T14:55:55.385+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-27T14:55:55.907+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-27T14:55:55.908+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-27T14:55:55.924+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2026-08-27T14:55:55.960+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-27T14:55:55.962+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27T14:55:55.969+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-08-27T14:55:56.430+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-27T14:55:56.430+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27T14:55:56.430+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-27T14:55:56.476+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1091 ms
+2026-08-27T14:55:56.693+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27T14:55:57.852+05:30  WARN 13936 --- [fmhy-clone] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+--------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+
+2026-08-27T14:55:57.852+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-08-27T14:55:57.875+05:30  INFO 13936 --- [fmhy-clone] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-27T14:55:57.887+05:30 ERROR 13936 --- [fmhy-clone] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+--------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.fmhyclone.FmhyCloneApplication.main(FmhyCloneApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+--------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 15 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+--------------------------------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1045
+Message    : Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:78) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.init(FlywayExecutor.java:275) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:120) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:181) ~[flyway-core-12.4.0.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.1.0.jar:4.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 22 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'fmhy_app'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:73) ~[flyway-core-12.4.0.jar:na]
+	... 29 common frames omitted
+
+2026-08-27T15:02:01.323+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 25052 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-08-27T15:02:01.323+05:30 DEBUG 25052 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-27T15:02:01.323+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-27T15:02:01.365+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-27T15:02:01.365+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-27T15:02:01.856+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-27T15:02:01.856+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-27T15:02:01.879+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-08-27T15:02:01.913+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-27T15:02:01.914+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-27T15:02:01.920+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 Redis repository interfaces.
+2026-08-27T15:02:02.357+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-27T15:02:02.368+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-27T15:02:02.368+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-27T15:02:02.412+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1047 ms
+2026-08-27T15:02:02.637+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-27T15:02:02.756+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78c35076
+2026-08-27T15:02:02.756+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-27T15:02:02.780+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-08-27T15:02:02.845+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `fmhy_clone`.`flyway_schema_history` does not exist yet
+2026-08-27T15:02:02.845+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.015s)
+2026-08-27T15:02:02.878+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `fmhy_clone`.`flyway_schema_history` ...
+2026-08-27T15:02:02.919+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: << Empty Schema >>
+2026-08-27T15:02:02.942+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema `fmhy_clone` to version "1 - init schema"
+2026-08-27T15:02:03.074+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `fmhy_clone`, now at version v1 (execution time 00:00.112s)
+2026-08-27T15:02:03.121+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-27T15:02:03.175+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-27T15:02:03.436+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-27T15:02:03.497+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-27T15:02:03.826+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-27T15:02:03.854+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-27T15:02:03.891+05:30  WARN 25052 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-27T15:02:04.396+05:30  WARN 25052 --- [fmhy-clone] [restartedMain] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b8f203e1-38e1-4ebb-914e-ed07218ceb26
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-27T15:02:04.422+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-27T15:02:04.530+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-08-27T15:02:04.657+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-27T15:02:04.657+05:30  INFO 25052 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 3.641 seconds (process running for 3.96)
+2026-08-27T15:02:28.465+05:30  INFO 25052 --- [fmhy-clone] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-27T15:02:28.520+05:30  INFO 25052 --- [fmhy-clone] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-27T15:02:28.538+05:30  INFO 25052 --- [fmhy-clone] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-27T15:02:28.541+05:30  INFO 25052 --- [fmhy-clone] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-27T15:02:28.543+05:30  INFO 25052 --- [fmhy-clone] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
