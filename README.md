@@ -123,7 +123,7 @@ From the `backend/` directory:
 On first run, Flyway automatically creates all tables in `fmhy_clone`. You should see:
 
 ```
-Started FmhyCloneApplication in X.XXX seconds
+Started FmhyCloneApplication in 3.3256 seconds
 ```
 
 The API will be available at `http://localhost:8080`.
