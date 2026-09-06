@@ -1,8 +1,6 @@
 package com.fmhyclone.entity;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import jakarta.persistence.*;
 import java.util.Set;
 import java.util.HashSet;
