@@ -135,7 +135,7 @@ The API will be available at `http://localhost:8080`.
 - [x] Architecture & tech decisions
 - [x] Database schema design
 - [x] Spring Boot project setup (Maven, Flyway, MySQL, Redis, Security deps)
-- [ ] Core domain layer (entities, repositories)
+- [x] Core domain layer (entities, repositories)
 - [ ] Public REST API (browse categories, list/search links)
 - [ ] Admin REST API (secured CRUD)
 - [ ] Security (Spring Security + JWT)
