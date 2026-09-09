@@ -1,4 +1,4 @@
-package com.fmhyclone.service;
+package com.fmhyclone.controller;
 
 import com.fmhyclone.dto.CategoryResponse;
 import com.fmhyclone.service.CategoryService;
