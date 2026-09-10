@@ -30,6 +30,11 @@ public class LinkService {
                 .map(this::mapToResponse);
     }
 
+    public Page<LinkResponse> getLinksByTag(String tagSlug, Pageable pageable) {
+        return linkRepository.findByTagSlug(tagSlug, pageable)
+                .map(this::mapToResponse);
+    }
+
     private LinkResponse mapToResponse(Link link) {
         CategoryResponse categoryResponse = new CategoryResponse(
             link.getCategory().getId(),
