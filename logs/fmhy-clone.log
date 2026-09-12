@@ -1,35 +1,459 @@
-2026-08-29T18:19:48.418+05:30  INFO 14296 --- [fmhy-clone] [main] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 14296 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
-2026-08-29T18:19:48.424+05:30 DEBUG 14296 --- [fmhy-clone] [main] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-08-29T18:19:48.430+05:30  INFO 14296 --- [fmhy-clone] [main] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-08-29T18:19:49.376+05:30  INFO 14296 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-08-29T18:19:49.383+05:30  INFO 14296 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-29T18:19:49.418+05:30  INFO 14296 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 JPA repository interfaces.
-2026-08-29T18:19:49.484+05:30  INFO 14296 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-08-29T18:19:49.486+05:30  INFO 14296 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-08-29T18:19:49.499+05:30  INFO 14296 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
-2026-08-29T18:50:19.104+05:30  INFO 22480 --- [fmhy-clone] [main] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 22480 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
-2026-08-29T18:50:19.108+05:30 DEBUG 22480 --- [fmhy-clone] [main] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
-2026-08-29T18:50:19.109+05:30  INFO 22480 --- [fmhy-clone] [main] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
-2026-08-29T18:50:19.953+05:30  INFO 22480 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-08-29T18:50:19.955+05:30  INFO 22480 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-08-29T18:50:20.067+05:30  INFO 22480 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 2 JPA repository interfaces.
-2026-08-29T18:50:20.124+05:30  INFO 22480 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-08-29T18:50:20.125+05:30  INFO 22480 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-08-29T18:50:20.139+05:30  INFO 22480 --- [fmhy-clone] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-08-29T18:50:20.139+05:30  INFO 22480 --- [fmhy-clone] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-08-29T18:50:20.139+05:30  INFO 22480 --- [fmhy-clone] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-2026-08-29T18:50:21.723+05:30  INFO 22480 --- [fmhy-clone] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: AotMetamodel]
-2026-08-29T18:50:21.775+05:30  INFO 22480 --- [fmhy-clone] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
-2026-08-29T18:50:22.181+05:30  INFO 22480 --- [fmhy-clone] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-08-29T18:50:22.210+05:30  INFO 22480 --- [fmhy-clone] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [undefined/unknown]
-	Database driver: undefined/unknown
-	Database dialect: SpringDataJpaAotDialect
-	Database version: 0.0
-	Default catalog/schema: unknown/unknown
+2026-09-12T20:34:53.752+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 7184 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:34:53.758+05:30 DEBUG 7184 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:34:53.759+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:34:53.809+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-12T20:34:53.809+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-12T20:34:54.610+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:34:54.612+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:34:54.774+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:34:54.828+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:34:54.829+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:34:54.845+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:34:54.846+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:34:54.846+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:34:54.846+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:34:54.847+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:34:55.422+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:34:55.436+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:34:55.437+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:34:55.482+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1673 ms
+2026-09-12T20:34:55.579+05:30 ERROR 7184 --- [fmhy-clone] [restartedMain] t.s.DeferredServletContainerInitializers : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter' defined in file [C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes\com\fmhyclone\security\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil' defined in file [C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes\com\fmhyclone\security\JwtUtil.class]: Unexpected exception during bean creation
+2026-09-12T20:34:55.613+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-12T20:34:55.639+05:30  WARN 7184 --- [fmhy-clone] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-09-12T20:34:55.646+05:30  INFO 7184 --- [fmhy-clone] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-12T20:34:55.663+05:30 ERROR 7184 --- [fmhy-clone] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.fmhyclone.FmhyCloneApplication.main(FmhyCloneApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.0.jar:4.1.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:150) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:429) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:167) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter' defined in file [C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes\com\fmhyclone\security\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil' defined in file [C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes\com\fmhyclone\security\JwtUtil.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4420) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:780) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.1.0.jar:4.1.0]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtil' defined in file [C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes\com\fmhyclone\security\JwtUtil.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 58 common frames omitted
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'app.jwt.expirationMs' in value "${app.jwt.expirationMs}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:296) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:129) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:96) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:286) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:257) ~[spring-core-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:184) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:959) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1679) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 67 common frames omitted
+
+2026-09-12T20:42:23.798+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 24572 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:42:23.800+05:30 DEBUG 24572 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:42:23.802+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:42:23.839+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-12T20:42:23.839+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-12T20:42:24.468+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:42:24.470+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:42:24.565+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:42:24.602+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:42:24.603+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:42:24.613+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:42:24.614+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:42:24.614+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:42:24.614+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:42:24.615+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:42:25.092+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:42:25.101+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:42:25.101+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:42:25.137+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1298 ms
+2026-09-12T20:42:25.244+05:30 DEBUG 24572 --- [fmhy-clone] [restartedMain] com.fmhyclone.security.JwtFilter         : Filter 'jwtFilter' configured for use
+2026-09-12T20:42:25.421+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-12T20:42:25.581+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c083e23
+2026-09-12T20:42:25.582+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-12T20:42:25.608+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-09-12T20:42:25.694+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.025s)
+2026-09-12T20:42:25.704+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: 1
+2026-09-12T20:42:25.708+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `fmhy_clone` is up to date. No migration necessary.
+2026-09-12T20:42:25.794+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-12T20:42:25.865+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-09-12T20:42:26.293+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-12T20:42:26.386+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
 	Autocommit mode: undefined/unknown
-	Isolation level: <unknown>
-	JDBC fetch size: undefined/unknown
-	Pool: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
+2026-09-12T20:42:27.366+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-12T20:42:27.404+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:42:27.472+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-12T20:42:28.192+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-12T20:42:28.228+05:30  WARN 24572 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-12T20:42:29.102+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-12T20:42:29.119+05:30  WARN 24572 --- [fmhy-clone] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.CacheManager' available: no CacheResolver specified - register a CacheManager bean or remove the @EnableCaching annotation from your configuration.
+2026-09-12T20:42:29.130+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:42:29.134+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-12T20:42:29.136+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-12T20:42:29.138+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-12T20:42:29.150+05:30  INFO 24572 --- [fmhy-clone] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-12T20:42:29.166+05:30 ERROR 24572 --- [fmhy-clone] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'org.springframework.cache.CacheManager' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.cache.CacheManager' in your configuration.
+
+2026-09-12T20:44:46.074+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 23352 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:44:46.076+05:30 DEBUG 23352 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:44:46.076+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:44:46.113+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-12T20:44:46.113+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-12T20:44:46.726+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:44:46.728+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:44:46.829+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:44:46.865+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:44:46.867+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:44:46.877+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:44:46.878+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:44:46.878+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:44:46.878+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:44:46.879+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:44:47.338+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:44:47.347+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:44:47.347+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:44:47.383+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1270 ms
+2026-09-12T20:44:47.477+05:30 DEBUG 23352 --- [fmhy-clone] [restartedMain] com.fmhyclone.security.JwtFilter         : Filter 'jwtFilter' configured for use
+2026-09-12T20:44:47.621+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-12T20:44:47.737+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63b9257a
+2026-09-12T20:44:47.738+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-12T20:44:47.762+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-09-12T20:44:47.838+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.017s)
+2026-09-12T20:44:47.846+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: 1
+2026-09-12T20:44:47.850+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `fmhy_clone` is up to date. No migration necessary.
+2026-09-12T20:44:47.908+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-12T20:44:47.953+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-09-12T20:44:48.229+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-12T20:44:48.294+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-12T20:44:49.018+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-12T20:44:49.049+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:44:49.102+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-12T20:44:49.639+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-12T20:44:49.666+05:30  WARN 23352 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-12T20:44:50.324+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-12T20:44:50.398+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-12T20:44:50.405+05:30  INFO 23352 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 4.656 seconds (process running for 4.965)
+2026-09-12T20:45:32.333+05:30  INFO 23352 --- [fmhy-clone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-12T20:45:32.334+05:30  INFO 23352 --- [fmhy-clone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-12T20:45:32.336+05:30  INFO 23352 --- [fmhy-clone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-12T20:49:20.475+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 6512 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:49:20.478+05:30 DEBUG 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:49:20.478+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:49:20.513+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-12T20:49:20.514+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-12T20:49:21.079+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:49:21.080+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:49:21.177+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:49:21.211+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:49:21.212+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:49:21.222+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:49:21.223+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:49:21.223+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:49:21.224+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:49:21.224+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:49:21.677+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:49:21.686+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:49:21.686+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:49:21.725+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1211 ms
+2026-09-12T20:49:21.823+05:30 DEBUG 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.security.JwtFilter         : Filter 'jwtFilter' configured for use
+2026-09-12T20:49:21.955+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-12T20:49:22.062+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@438d1fdf
+2026-09-12T20:49:22.063+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-12T20:49:22.089+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-09-12T20:49:22.166+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.019s)
+2026-09-12T20:49:22.176+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: 1
+2026-09-12T20:49:22.178+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `fmhy_clone` is up to date. No migration necessary.
+2026-09-12T20:49:22.237+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-12T20:49:22.275+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-09-12T20:49:22.561+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-12T20:49:22.624+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-12T20:49:23.403+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-12T20:49:23.440+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:49:23.500+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-12T20:49:24.053+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-12T20:49:24.083+05:30  WARN 6512 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-12T20:49:24.751+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-12T20:49:24.821+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-12T20:49:24.828+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 4.672 seconds (process running for 4.989)
+2026-09-12T20:51:13.624+05:30  INFO 6512 --- [fmhy-clone] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-12T20:51:13.632+05:30  INFO 6512 --- [fmhy-clone] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-12T20:51:13.925+05:30  INFO 6512 --- [fmhy-clone] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-12T20:51:13.946+05:30  INFO 6512 --- [fmhy-clone] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:51:13.949+05:30  INFO 6512 --- [fmhy-clone] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-12T20:51:13.956+05:30  INFO 6512 --- [fmhy-clone] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-12T20:51:14.087+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 6512 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:51:14.087+05:30 DEBUG 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:51:14.088+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:51:14.377+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:51:14.378+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:51:14.389+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:51:14.401+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:51:14.401+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:51:14.405+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:51:14.406+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:51:14.406+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:51:14.406+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:51:14.406+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:51:14.534+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:51:14.536+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:51:14.536+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:51:14.568+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 479 ms
+2026-09-12T20:51:14.608+05:30 DEBUG 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.security.JwtFilter         : Filter 'jwtFilter' configured for use
+2026-09-12T20:51:14.638+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-12T20:51:14.642+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7529e1bf
+2026-09-12T20:51:14.642+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-12T20:51:14.643+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-09-12T20:51:14.664+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.006s)
+2026-09-12T20:51:14.671+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: 1
+2026-09-12T20:51:14.673+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `fmhy_clone` is up to date. No migration necessary.
+2026-09-12T20:51:14.687+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-12T20:51:14.718+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-12T20:51:14.722+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-12T20:51:14.816+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-12T20:51:14.824+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:51:14.909+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-12T20:51:14.918+05:30  WARN 6512 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-12T20:51:15.153+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-12T20:51:15.170+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-12T20:51:15.173+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 1.121 seconds (process running for 115.334)
+2026-09-12T20:51:15.176+05:30  INFO 6512 --- [fmhy-clone] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-12T20:52:22.847+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 3216 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:52:22.850+05:30 DEBUG 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:52:22.850+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:52:22.890+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-12T20:52:22.891+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-12T20:52:23.495+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:52:23.496+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:52:23.602+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:52:23.639+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:52:23.640+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:52:23.652+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:23.653+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:23.654+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:23.654+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:23.654+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:52:24.109+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:52:24.117+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:52:24.118+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:52:24.156+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1265 ms
+2026-09-12T20:52:24.255+05:30 DEBUG 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.security.JwtFilter         : Filter 'jwtFilter' configured for use
+2026-09-12T20:52:24.397+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-12T20:52:24.504+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e518f04
+2026-09-12T20:52:24.505+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-12T20:52:24.528+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-09-12T20:52:24.605+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.017s)
+2026-09-12T20:52:24.613+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: 1
+2026-09-12T20:52:24.616+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `fmhy_clone` is up to date. No migration necessary.
+2026-09-12T20:52:24.682+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-12T20:52:24.729+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-09-12T20:52:25.014+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-12T20:52:25.077+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-12T20:52:25.843+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-12T20:52:25.877+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:52:25.934+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-12T20:52:26.457+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-12T20:52:26.483+05:30  WARN 3216 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-12T20:52:27.144+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-12T20:52:27.206+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-12T20:52:27.214+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 4.675 seconds (process running for 4.973)
+2026-09-12T20:52:40.072+05:30  INFO 3216 --- [fmhy-clone] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-12T20:52:40.072+05:30  INFO 3216 --- [fmhy-clone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-12T20:52:40.074+05:30  INFO 3216 --- [fmhy-clone] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-12T20:52:47.972+05:30  INFO 3216 --- [fmhy-clone] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-12T20:52:47.977+05:30  INFO 3216 --- [fmhy-clone] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-12T20:52:48.101+05:30  INFO 3216 --- [fmhy-clone] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-12T20:52:48.114+05:30  INFO 3216 --- [fmhy-clone] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:52:48.116+05:30  INFO 3216 --- [fmhy-clone] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-12T20:52:48.121+05:30  INFO 3216 --- [fmhy-clone] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-12T20:52:48.180+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Starting FmhyCloneApplication using Java 17.0.12 with PID 3216 (C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone\target\classes started by Kartik in C:\Users\Kartik\Documents\JAVA-Springboot\fmhy-clone)
+2026-09-12T20:52:48.180+05:30 DEBUG 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-09-12T20:52:48.180+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-09-12T20:52:48.326+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:52:48.328+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-12T20:52:48.339+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-09-12T20:52:48.349+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-09-12T20:52:48.349+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-09-12T20:52:48.353+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.AdminUserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:48.353+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.CategoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:48.353+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.LinkRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:48.353+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.fmhyclone.repository.TagRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-09-12T20:52:48.354+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-09-12T20:52:48.466+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-12T20:52:48.467+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-12T20:52:48.467+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-12T20:52:48.482+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 301 ms
+2026-09-12T20:52:48.505+05:30 DEBUG 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.security.JwtFilter         : Filter 'jwtFilter' configured for use
+2026-09-12T20:52:48.521+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-12T20:52:48.525+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bce3228
+2026-09-12T20:52:48.525+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-12T20:52:48.526+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true (MySQL 8.0)
+2026-09-12T20:52:48.541+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.003s)
+2026-09-12T20:52:48.544+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `fmhy_clone`: 1
+2026-09-12T20:52:48.544+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `fmhy_clone` is up to date. No migration necessary.
+2026-09-12T20:52:48.553+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-12T20:52:48.572+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-12T20:52:48.575+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/fmhy_clone?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: fmhy_clone/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-12T20:52:48.649+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-12T20:52:48.657+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-12T20:52:48.714+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-09-12T20:52:48.721+05:30  WARN 3216 --- [fmhy-clone] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-12T20:52:48.774+05:30 DEBUG 3216 --- [fmhy-clone] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-12T20:52:48.843+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-12T20:52:48.854+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-12T20:52:48.856+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 0.692 seconds (process running for 26.616)
+2026-09-12T20:52:48.858+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
