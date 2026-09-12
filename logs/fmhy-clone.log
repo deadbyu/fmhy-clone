@@ -457,3 +457,4 @@ Consider defining a bean of type 'org.springframework.cache.CacheManager' in you
 2026-09-12T20:52:48.854+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
 2026-09-12T20:52:48.856+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] com.fmhyclone.FmhyCloneApplication       : Started FmhyCloneApplication in 0.692 seconds (process running for 26.616)
 2026-09-12T20:52:48.858+05:30  INFO 3216 --- [fmhy-clone] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-12T21:29:42.238+05:30  WARN 3216 --- [fmhy-clone] [HikariPool-2:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=36m23s756ms591µs800ns).
